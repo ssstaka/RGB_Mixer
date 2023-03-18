@@ -36,24 +36,40 @@
 ### 使用部品
 
 実際に作成したものについては以下の通り。
-抵抗や積層セラミックコンデンサは秋月電子や千石電商、マルツで入手できる。
 
-| リファレンス | 名称 | 型番 | 購入先 | URL | 備考 |
+抵抗や積層セラミックコンデンサは特定の型番である必要はない。秋月電子や千石電商、マルツで入手できる。
+
+| リファレンス | 名称 | 型番 | 購入先 | 備考 |
 |---|---|---|---|---|---|
-| U1 | DCDCコンバータ | AE-XCL103-5V0 | 秋月電子 | https://akizukidenshi.com/catalog/g/gK-15097/ | |
-| D1 | 3色LED | OSTCXBEAC1S | 秋月電子 | https://akizukidenshi.com/catalog/g/gI-13755/ | |
-| RV4, 5, 6 | スライドボリューム | RS45111-OC10-CO-PO-B103 | 千石電商 | https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-4HS6 | Bカーブを使ったが、Aカーブのほうがよいかも |
+| U1 | DCDCコンバータ | AE-XCL103-5V0 | 秋月電子 | |
+| D1 | 3色LED | OSTCXBEAC1S | 秋月電子 | |
+| RV4, 5, 6 | スライドボリューム | RS45111-OC10-CO-PO-B103 | 千石電商 | |
 | R1〜7 | 抵抗 | |  | | 1/4W品 |
-| RV1, 2, 3 | 半固定抵抗 | 3362P 100Ω | 秋月電子 | https://akizukidenshi.com/catalog/g/gP-03267/ | 他のものでもよい |
-| M1 | マイコンボード | Seeed Xiao RP2040 | 秋月電子など | https://akizukidenshi.com/catalog/g/gM-17044/ | CircuitPythonが使えれば可 |
-| SW1(D2) | 電源スイッチ | DS-060K-S-LG | 千石電商など | https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-5CHE | D2はスイッチ内蔵のLED |
-| SW2 | モード切替スイッチ | JF-15CKCGNP2 | マルツ | https://www.marutsu.co.jp/GoodsDetail.jsp?q=JF-15CKCGNP2&salesGoodsCode=15724&shopNo=3 | モーメンタリなら可 |
-| Q1, 2, 3 | トランジスタ | 2SC2120 | 秋月電子 | https://akizukidenshi.com/catalog/g/gI-13829/ | |
-| C1〜4 | 抵抗 | 積層セラミックコンデンサ | | | |
-| | ケース | PF20-4-13W | マルツ | https://www.marutsu.co.jp/pc/i/515753/ | |
-| | 電池ボックス | BC3-2L-W | マルツ | https://www.marutsu.co.jp/pc/i/2236794/ | |
-| | スライドボリュームつまみ | fader-mk2-red | 千石電商 | https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-5KM5 | blueとgreenも |
-| | LEDカバー | ポンポンライト | ダイソー | https://jp.daisonet.com/products/4549131971408?_pos=2&_sid=26a631bf3&_ss=r | その他の形状もあり |
+| RV1, 2, 3 | 半固定抵抗 | 3362P 100Ω | 秋月電子 | |
+| M1 | マイコンボード | Seeed Xiao RP2040 | 秋月電子など | |
+| SW1(D2) | 電源スイッチ | DS-060K-S-LG | 千石電商など | D2はスイッチ内蔵のLED |
+| SW2 | モード切替スイッチ | JF-15CKCGNP2 | マルツ | モーメンタリなら可 |
+| Q1, 2, 3 | トランジスタ | 2SC2120 | 秋月電子 | |
+| C1〜4 | 抵抗 | 積層セラミックコンデンサ | | |
+| | ケース | PF20-4-13W | マルツ | |
+| | 電池ボックス | BC3-2L-W | マルツ | |
+| | スライドボリュームつまみ | fader-mk2-red | 千石電商 | blueとgreenも |
+| | LEDカバー | ポンポンライト | ダイソー | その他の形状もあり |
+
+URLは以下。
+
+* AE-XCL103-5V0: https://akizukidenshi.com/catalog/g/gK-15097/
+* OSTCXBEAC1S: https://akizukidenshi.com/catalog/g/gI-13755/
+* RS45111-OC10-CO-PO-B103: https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-4HS6
+* 3362P 100Ω: https://akizukidenshi.com/catalog/g/gP-03267/
+* Seeed Xiao RP2040: https://akizukidenshi.com/catalog/g/gM-17044/
+* DS-060K-S-LG:  https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-5CHE
+* JF-15CKCGNP2: https://www.marutsu.co.jp/GoodsDetail.jsp?q=JF-15CKCGNP2&salesGoodsCode=15724&shopNo=3
+* 2SC2120: https://akizukidenshi.com/catalog/g/gI-13829/
+* PF20-4-13W:  https://www.marutsu.co.jp/pc/i/515753/
+* BC3-2L-W: https://www.marutsu.co.jp/pc/i/2236794/
+* fader-mk2-red: https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-5KM5
+* ポンポンライト: https://jp.daisonet.com/products/4549131971408?_pos=2&_sid=26a631bf3&_ss=r
 
 ### 組立と調整
 
