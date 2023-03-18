@@ -21,33 +21,35 @@
 * LED
     * パワーLEDを採用。砲弾型だと暗いため
     * PWM制御
-    3色のVfがそれぞれ異なる。ボリュームの出力をそのままLEDに接続すると、ボリューム位置と強度の関係が色ごとに異なってしまう。
-    PWMであれば3色とも同じように変化させることができるため
+    3色のVfがそれぞれ異なる。ボリュームの出力をそのままLEDに接続すると、ボリューム位置と強度の関係が色ごとに異なってしまう。  
+    PWMであれば3色とも同じように変化させることができる
+* RV4〜6はBカーブ品にしたが、人間の視覚が明るさに対して線形ではなく対数的に変化するため、Aカーブがよいかもしれない。  
+現在はファームウェア内で対数処理をしている
 * R1〜3は最大の明るさを決める。なくても動作するが、半固定抵抗調整中に誤って大電流を流す事故を避けるために入れてある
-* マイコンの`Batt`、`Slide_R`、`Slide_G`、`Slide_B`入力前にローパスフィルタを入れたが、あまり効果がない模様。
+* マイコンの`Batt`、`Slide_R`、`Slide_G`、`Slide_B`入力前にローパスフィルタを入れたが、あまり効果がない模様。  
 定数を見直すかファームウェアで移動平均を取るなどして、フィルタはなしにしてもよいかもしれない
-* ファームウェアにCircuitPythonを使っており、マイコンはCircuitPythonが使用できるボードなら他のものでも可。
+* ファームウェアにCircuitPythonを使っており、マイコンはCircuitPythonが使用できるボードなら他のものでも可。  
 [CircuitPythonのサイト](https://circuitpython.org/downloads)にリストがある。
-* LEDカバーは半透明のものであればよく、紙コップでも可。
+* LEDカバーは半透明のものであればよく、紙コップでも可。  
 スモーキング加工した樹脂でもよいかもしれない
 
 ### 使用部品
 
 実際に作成したものについては以下の通り。
-お好みで他のものに変えてよいと思う。
+抵抗や積層セラミックコンデンサは秋月電子や千石電商、マルツで入手できる。
 
 | リファレンス | 名称 | 型番 | 購入先 | URL | 備考 |
 |---|---|---|---|---|---|
 | U1 | DCDCコンバータ | AE-XCL103-5V0 | 秋月電子 | https://akizukidenshi.com/catalog/g/gK-15097/ | |
 | D1 | 3色LED | OSTCXBEAC1S | 秋月電子 | https://akizukidenshi.com/catalog/g/gI-13755/ | |
 | RV4, 5, 6 | スライドボリューム | RS45111-OC10-CO-PO-B103 | 千石電商 | https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-4HS6 | Bカーブを使ったが、Aカーブのほうがよいかも |
-| R1〜7 | 抵抗 | | 秋月電子、千石電商など | | 1/4W品 |
+| R1〜7 | 抵抗 | |  | | 1/4W品 |
 | RV1, 2, 3 | 半固定抵抗 | 3362P 100Ω | 秋月電子 | https://akizukidenshi.com/catalog/g/gP-03267/ | 他のものでもよい |
 | M1 | マイコンボード | Seeed Xiao RP2040 | 秋月電子など | https://akizukidenshi.com/catalog/g/gM-17044/ | CircuitPythonが使えれば可 |
 | SW1(D2) | 電源スイッチ | DS-060K-S-LG | 千石電商など | https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-5CHE | D2はスイッチ内蔵のLED |
 | SW2 | モード切替スイッチ | JF-15CKCGNP2 | マルツ | https://www.marutsu.co.jp/GoodsDetail.jsp?q=JF-15CKCGNP2&salesGoodsCode=15724&shopNo=3 | モーメンタリなら可 |
 | Q1, 2, 3 | トランジスタ | 2SC2120 | 秋月電子 | https://akizukidenshi.com/catalog/g/gI-13829/ | |
-| C1〜4 | 抵抗 | 積層セラミックコンデンサ | | 秋月電子、千石電商など | |
+| C1〜4 | 抵抗 | 積層セラミックコンデンサ | | | |
 | | ケース | PF20-4-13W | マルツ | https://www.marutsu.co.jp/pc/i/515753/ | |
 | | 電池ボックス | BC3-2L-W | マルツ | https://www.marutsu.co.jp/pc/i/2236794/ | |
 | | スライドボリュームつまみ | fader-mk2-red | 千石電商 | https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=EEHD-5KM5 | blueとgreenも |
